@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" version="5.0" group="jlsitemap" method="upgrade">
     <name>plg_jlsitemap_djclassifieds_sitemap</name>
-    <author>Your Name</author>
+    <author>Dean</author>
     <version>1.2.0</version>
     <description>PLG_JLSITEMAP_DJCLASSIFIEDS_SITEMAP_DESC</description>
     <files>
@@ -61,3 +61,4 @@
         </fields>
     </config>
 </extension>
+
