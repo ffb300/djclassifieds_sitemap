@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="5.0" group="jlsitemap" method="upgrade">
+    <name>plg_jlsitemap_djclassifieds_sitemap</name>
+    <author>Your Name</author>
+    <version>1.2.0</version>
+    <description>PLG_JLSITEMAP_DJCLASSIFIEDS_SITEMAP_DESC</description>
+    <files>
+        <filename plugin="djclassifieds_sitemap">djclassifieds_sitemap.php</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_jlsitemap_djclassifieds_sitemap.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_jlsitemap_djclassifieds_sitemap.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="include_products" type="list" default="1"
+                       label="PLG_JLSITEMAP_DJCLASSIFIEDS_SHOW_LISTINGS_LABEL"
+                       description="PLG_JLSITEMAP_DJCLASSIFIEDS_SHOW_LISTINGS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="max_items" type="text" default="100"
+                       label="PLG_JLSITEMAP_DJCLASSIFIEDS_MAX_ITEMS_LABEL"
+                       description="PLG_JLSITEMAP_DJCLASSIFIEDS_MAX_ITEMS_DESC" />
+                <field name="order_items" type="list" default="date_start DESC"
+                       label="PLG_JLSITEMAP_DJCLASSIFIEDS_ORDER_ITEMS_LABEL"
+                       description="PLG_JLSITEMAP_DJCLASSIFIEDS_ORDER_ITEMS_DESC">
+                    <option value="date_start DESC">Newest first</option>
+                    <option value="date_start ASC">Oldest first</option>
+                    <option value="name ASC">Name A-Z</option>
+                    <option value="name DESC">Name Z-A</option>
+                </field>
+                <field name="category_include" type="text" default=""
+                       label="PLG_JLSITEMAP_DJCLASSIFIEDS_INCLUDE_CATS_LABEL"
+                       description="PLG_JLSITEMAP_DJCLASSIFIEDS_INCLUDE_CATS_DESC" />
+                <field name="category_exclude" type="text" default=""
+                       label="PLG_JLSITEMAP_DJCLASSIFIEDS_EXCLUDE_CATS_LABEL"
+                       description="PLG_JLSITEMAP_DJCLASSIFIEDS_EXCLUDE_CATS_DESC" />
+                <field name="enable_logging" type="list" default="0"
+                       label="PLG_JLSITEMAP_DJCLASSIFIEDS_ENABLE_LOGGING_LABEL"
+                       description="PLG_JLSITEMAP_DJCLASSIFIEDS_ENABLE_LOGGING_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset name="xml">
+                <field name="cat_priority" type="text" default="0.5"
+                       label="PLG_JLSITEMAP_DJCLASSIFIEDS_CAT_PRIORITY_LABEL"
+                       description="PLG_JLSITEMAP_DJCLASSIFIEDS_CAT_PRIORITY_DESC" />
+                <field name="cat_changefreq" type="text" default="weekly"
+                       label="PLG_JLSITEMAP_DJCLASSIFIEDS_CAT_CHANGEFREQ_LABEL"
+                       description="PLG_JLSITEMAP_DJCLASSIFIEDS_CAT_CHANGEFREQ_DESC" />
+                <field name="link_priority" type="text" default="0.5"
+                       label="PLG_JLSITEMAP_DJCLASSIFIEDS_ITEM_PRIORITY_LABEL"
+                       description="PLG_JLSITEMAP_DJCLASSIFIEDS_ITEM_PRIORITY_DESC" />
+                <field name="link_changefreq" type="text" default="weekly"
+                       label="PLG_JLSITEMAP_DJCLASSIFIEDS_ITEM_CHANGEFREQ_LABEL"
+                       description="PLG_JLSITEMAP_DJCLASSIFIEDS_ITEM_CHANGEFREQ_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
